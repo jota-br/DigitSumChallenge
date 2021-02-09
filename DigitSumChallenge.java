@@ -8,28 +8,27 @@ public class DigitSumChallenge {
             return -1;
         }
 
-        int numDigits = String.valueOf(number).length();
+        boolean numDigits = true;
 
-        int i = 0;
-        int n, numberSum = 0, leftNumber = number;
+        int n, numberSum = 0;
         while(true) {
-            if(numDigits == (String.valueOf(number).length())) {
+            if(numDigits) {
                 n = number % 10;
                 System.out.println(n);
                 numberSum += n;
-                numDigits = 0;
+                numDigits = false;
                 continue;
             }
-            leftNumber = leftNumber / 10;
-            n = leftNumber % 10;
+            number /= 10;
+            n = number % 10;
             System.out.println(n);
             numberSum += n;
-            if((String.valueOf(leftNumber).length()) == 1){
+            if((String.valueOf(number).length()) == 1){
                 break;
             }
         }
 
         System.out.println(numberSum);
-        return n;
+        return numberSum;
     }
 }
