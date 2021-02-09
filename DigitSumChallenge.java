@@ -13,7 +13,7 @@ public class DigitSumChallenge {
         int i = 0;
         int n, numberSum = 0, leftNumber = number;
         while(true) {
-            if(numDigits == String.valueOf(number).length()) {
+            if(numDigits == (String.valueOf(number).length())) {
                 n = number % 10;
                 System.out.println(n);
                 numberSum += n;
@@ -24,7 +24,7 @@ public class DigitSumChallenge {
             n = leftNumber % 10;
             System.out.println(n);
             numberSum += n;
-            if(String.valueOf(leftNumber).length() == 1){
+            if((String.valueOf(leftNumber).length()) == 1){
                 break;
             }
         }
